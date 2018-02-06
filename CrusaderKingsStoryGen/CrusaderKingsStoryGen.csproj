@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DC3E0BD-6CE8-4ED5-9FCA-20A5594CD6D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrusaderKingsStoryGen</RootNamespace>
+    <AssemblyName>CrusaderKingsStoryGen</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevIL.NET2, Version=1.1.2619.31671, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\devil\DevIL.NET2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArbitaryFileEditor.cs" />
+    <Compile Include="BookmarkManager.cs" />
+    <Compile Include="CharacterManager.cs" />
+    <Compile Include="CreateBookmark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBookmark.Designer.cs">
+      <DependentUpon>CreateBookmark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CulturalDna.cs" />
+    <Compile Include="CulturalDnaManger.cs" />
+    <Compile Include="CultureDnaStringManip.cs" />
+    <Compile Include="CultureManager.cs" />
+    <Compile Include="DateFunctions.cs" />
+    <Compile Include="DecisionManager.cs" />
+    <Compile Include="DynastyManager.cs" />
+    <Compile Include="EventLogger.cs" />
+    <Compile Include="EventManager.cs" />
+    <Compile Include="EventParser.cs" />
+    <Compile Include="FlagManager.cs" />
+    <Compile Include="GenerationOptions.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Government.cs" />
+    <Compile Include="GovernmentManager.cs" />
+    <Compile Include="ISerializeXml.cs" />
+    <Compile Include="LanguageManager.cs" />
+    <Compile Include="MainResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MapGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapGenerator.Designer.cs">
+      <DependentUpon>MapGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapGen\AbstractFloodFiller.cs" />
+    <Compile Include="MapGen\FloodFillRangeQueue.cs" />
+    <Compile Include="MapGen\NormalMap.cs" />
+    <Compile Include="MapGen\NormalMapGenerator.cs" />
+    <Compile Include="MapGen\ProvinceBitmapManager.cs" />
+    <Compile Include="MapGen\QueueLinearFloodFiller.cs" />
+    <Compile Include="MapGen\RiverManager.cs" />
+    <Compile Include="MapGen\TerrainMap.cs" />
+    <Compile Include="MapGen\Delaunay\Edge.cs" />
+    <Compile Include="MapGen\Delaunay\EdgeList.cs" />
+    <Compile Include="MapGen\Delaunay\EdgeReorderer.cs" />
+    <Compile Include="MapGen\Delaunay\Halfedge.cs" />
+    <Compile Include="MapGen\Delaunay\HalfedgePriorityQueue.cs" />
+    <Compile Include="MapGen\Delaunay\ICoord.cs" />
+    <Compile Include="MapGen\Delaunay\LR.cs" />
+    <Compile Include="MapGen\Delaunay\Site.cs" />
+    <Compile Include="MapGen\Delaunay\SiteList.cs" />
+    <Compile Include="MapGen\Delaunay\Triangle.cs" />
+    <Compile Include="MapGen\Delaunay\Vertex.cs" />
+    <Compile Include="MapGen\Delaunay\Voronoi.cs" />
+    <Compile Include="MapGen\GeneratedTerrainMap.cs" />
+    <Compile Include="MapGen\Geom\Circle.cs" />
+    <Compile Include="MapGen\Geom\LineSegment.cs" />
+    <Compile Include="MapGen\Geom\Polygon.cs" />
+    <Compile Include="MapGen\Geom\Rectf.cs" />
+    <Compile Include="MapGen\Geom\Vector2f.cs" />
+    <Compile Include="MapGen\Geom\Winding.cs" />
+    <Compile Include="MapGen\GrayBMP_File.cs" />
+    <Compile Include="MapGen\ImageConverter.cs" />
+    <Compile Include="MapGen\MapGenManager.cs" />
+    <Compile Include="MapGen\Noise.cs" />
+    <Compile Include="MapGen\UnsafeQueueLinearFloodFiller.cs" />
+    <Compile Include="MapManager.cs" />
+    <Compile Include="ModManager.cs" />
+    <Compile Include="ModSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModSelect.Designer.cs">
+      <DependentUpon>ModSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModularFunctionalityManager.cs" />
+    <Compile Include="MultiSelectTreeview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NicknameManager.cs" />
+    <Compile Include="NoiseTexture.cs" />
+    <Compile Include="OnActionsManager.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Progress\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\AlertForm.designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyPageProxies\CsvConverter.cs" />
+    <Compile Include="PropertyPageProxies\CultureGroupProxy.cs" />
+    <Compile Include="PropertyPageProxies\CultureProxy.cs" />
+    <Compile Include="PropertyPageProxies\MyColorEditor.cs" />
+    <Compile Include="PropertyPageProxies\ReligionGroupProxy.cs" />
+    <Compile Include="PropertyPageProxies\ReligionProxy.cs" />
+    <Compile Include="PropertyPageProxies\TitleProxy.cs" />
+    <Compile Include="ProvinceParser.cs" />
+    <Compile Include="Rand.cs" />
+    <Compile Include="RegionManager.cs" />
+    <Compile Include="ReligionGroupParser.cs" />
+    <Compile Include="ReligionManager.cs" />
+    <Compile Include="ReligionParser.cs" />
+    <Compile Include="ScriptBlueprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScriptBlueprint.Designer.cs">
+      <DependentUpon>ScriptBlueprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScripterTriggerManager.cs" />
+    <Compile Include="RenderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RenderPanel.Designer.cs">
+      <DependentUpon>RenderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScopeProxy.cs" />
+    <Compile Include="Simulation\CharacterParser.cs" />
+    <Compile Include="Simulation\SimulationManager.cs" />
+    <Compile Include="SocietyManager.cs" />
+    <Compile Include="SocietyTemplates.cs" />
+    <Compile Include="SpriteManager.cs" />
+    <Compile Include="StarNames.cs" />
+    <Compile Include="Story\StoryManager.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="TechnologyGroup.cs" />
+    <Compile Include="TechnologyManager.cs" />
+    <Compile Include="TerrainGenNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerrainGenNew.Designer.cs">
+      <DependentUpon>TerrainGenNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleManager.cs" />
+    <Compile Include="TitleParser.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptLoader.cs" />
+    <Compile Include="TraitManager.cs" />
+    <Compile Include="WarManager.cs" />
+    <Compile Include="XmlExtensions.cs" />
+    <EmbeddedResource Include="CreateBookmark.resx">
+      <DependentUpon>CreateBookmark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapGenerator.resx">
+      <DependentUpon>MapGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModSelect.resx">
+      <DependentUpon>ModSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScriptBlueprint.resx">
+      <DependentUpon>ScriptBlueprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainGenNew.resx">
+      <DependentUpon>TerrainGenNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="data\common\disease\00_disease.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\adjacencies.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\terrain\fractal_noise.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\pdxmap.lua">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\decisiontemplates\decisions\storygengovernmenttype_decisions.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\desert.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\grass.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\colormap.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\continent.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\island_region.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\seasons.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\terrain\colormap_water.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mapstuff\world_normal_height.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\mountain.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\ocean.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\common\trade_routes\00_silk_route.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DevIL.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DevIL.NET2.dll" />
+    <Content Include="ILU.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\mapstuff\statics\" />
+    <Folder Include="MapGen\NoiseLib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LibNoise\LibNoise\LibNoise.csproj">
+      <Project>{031C8CFF-F147-44EA-B7E5-0A5644808A7E}</Project>
+      <Name>LibNoise</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cyotek.Windows.Forms.ColorPicker-master\Cyotek.Windows.Forms.ColorPicker\Cyotek.Windows.Forms.ColorPicker.csproj">
+      <Project>{fb2a5786-cd2e-42ce-bc5d-0fce90034221}</Project>
+      <Name>Cyotek.Windows.Forms.ColorPicker</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
