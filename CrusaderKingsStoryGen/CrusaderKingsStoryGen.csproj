@@ -96,6 +96,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Cyotek.Windows.Forms.ColorPicker">
+      <HintPath>packages\Cyotek.Windows.Forms.ColorPicker.1.7.2\lib\net35\Cyotek.Windows.Forms.ColorPicker.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArbitaryFileEditor.cs" />
@@ -302,6 +305,62 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="packages.config" />
+    <None Include="devil\COPYING.txt" />
+    <None Include="devil\DevIL.dll" />
+    <None Include="devil\DevIL.NET.cpp" />
+    <None Include="devil\DevIL.NET.dll" />
+    <None Include="devil\DevIL.NET2.dll" />
+    <None Include="devil\ILU.dll" />
+    <None Include="LibNoise\LibNoise.sln" />
+    <Compile Include="LibNoise\LibNoise\Billow.cs" />
+    <Compile Include="LibNoise\LibNoise\Checkerboard.cs" />
+    <Compile Include="LibNoise\LibNoise\Constant.cs" />
+    <Compile Include="LibNoise\LibNoise\Cylinders.cs" />
+    <Compile Include="LibNoise\LibNoise\FastBillow.cs" />
+    <Compile Include="LibNoise\LibNoise\FastNoise.cs" />
+    <Compile Include="LibNoise\LibNoise\FastNoiseBasis.cs" />
+    <Compile Include="LibNoise\LibNoise\FastRidgedMultifractal.cs" />
+    <Compile Include="LibNoise\LibNoise\FastTurbulence.cs" />
+    <Compile Include="LibNoise\LibNoise\GradientNoiseBasis.cs" />
+    <Compile Include="LibNoise\LibNoise\IModule.cs" />
+    <None Include="LibNoise\LibNoise\LibNoise.csproj" />
+    <Compile Include="LibNoise\LibNoise\Math.cs" />
+    <Compile Include="LibNoise\LibNoise\Perlin.cs" />
+    <Compile Include="LibNoise\LibNoise\RidgedMultifractal.cs" />
+    <Compile Include="LibNoise\LibNoise\Spheres.cs" />
+    <Compile Include="LibNoise\LibNoise\Turbulence.cs" />
+    <Compile Include="LibNoise\LibNoise\ValueNoiseBasis.cs" />
+    <Compile Include="LibNoise\LibNoise\Voronoi.cs" />
+    <Compile Include="LibNoise\LibNoise\Models\Cylinder.cs" />
+    <Compile Include="LibNoise\LibNoise\Models\Line.cs" />
+    <Compile Include="LibNoise\LibNoise\Models\Plane.cs" />
+    <Compile Include="LibNoise\LibNoise\Models\Sphere.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\AbsoluteOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\Add.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\BiasOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\BitmapSelect.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\Blend.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\ClampOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\CurveOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\DisplaceInput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\ExponentialOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\InvertInput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\InvertOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\LargerOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\LockBitmap.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\Multiply.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\MultiplyPositive.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\Power.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\RotateInput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\ScaleBiasOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\ScaleInput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\ScaleOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\Select.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\SmallerOutput.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\Terrace.cs" />
+    <Compile Include="LibNoise\LibNoise\Modfiers\TranslateInput.cs" />
+    <None Include="LibNoise\LibNoise\Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -360,10 +419,6 @@
     <ProjectReference Include="..\..\LibNoise\LibNoise\LibNoise.csproj">
       <Project>{031C8CFF-F147-44EA-B7E5-0A5644808A7E}</Project>
       <Name>LibNoise</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Cyotek.Windows.Forms.ColorPicker-master\Cyotek.Windows.Forms.ColorPicker\Cyotek.Windows.Forms.ColorPicker.csproj">
-      <Project>{fb2a5786-cd2e-42ce-bc5d-0fce90034221}</Project>
-      <Name>Cyotek.Windows.Forms.ColorPicker</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
