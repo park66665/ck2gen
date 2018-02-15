@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// This is one of the most important parts of this program.
+// Should be fixed in order to update this program to CK2 2.8.1.1.
+
 namespace CrusaderKingsStoryGen
 {
     class EventNamespace
@@ -41,6 +44,9 @@ namespace CrusaderKingsStoryGen
         public void Load()
         {
             return;
+
+            // This code is already dead.
+
             var files = ModManager.instance.GetFileKeys("events");
             
             foreach (var file in files)
@@ -93,7 +99,10 @@ namespace CrusaderKingsStoryGen
         {
             return;
 
+            // Necrocode.
+
             var files = Directory.GetFiles(Globals.ModDir + "events\\");
+
             foreach (var file in files)
             {
                 File.Delete(file);

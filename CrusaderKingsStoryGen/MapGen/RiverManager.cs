@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using LibNoise.Modfiers;
 
+//Rivers...? What a plan.
+
 namespace CrusaderKingsStoryGen.MapGen
 {
     class RiverManager

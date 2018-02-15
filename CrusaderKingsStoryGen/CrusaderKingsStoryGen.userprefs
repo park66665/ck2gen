@@ -5,11 +5,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="LibNoise\LibNoise\Modfiers\LockBitmap.cs">
-    <Files>
-      <File FileName="MapGenerator.cs" Line="15" Column="7" />
-      <File FileName="LibNoise\LibNoise\Modfiers\LockBitmap.cs" Line="9" Column="18" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MultiItemStartupConfigurations />
+  <AuthorInfo Name="Xenomedes" Email="" Copyright="" Company="" Trademark="" />
 </Properties>
