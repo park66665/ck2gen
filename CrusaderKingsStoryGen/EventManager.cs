@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 // This is one of the most important parts of this program.
 // Should be fixed in order to update this program to CK2 2.8.1.1.
 
+// TODO Fix this to be more compatible to CK2 2.8.1.1?
+
 namespace CrusaderKingsStoryGen
 {
     class EventNamespace
@@ -23,6 +25,7 @@ namespace CrusaderKingsStoryGen
     }
     class EventManager
     {
+        
         public static EventManager instance = new EventManager();
         public List<Script>  Scripts = new List<Script>();
         public void AddToNamespace(String names, EventParser ev)
@@ -228,8 +231,7 @@ namespace CrusaderKingsStoryGen
                 
                     if (c.Name == "culture_group" || c.Name == "culture")
                     {
-                        if (c.Value.ToString().ToUpper() == "FROM" || c.Value.ToString().ToUpper() == "ROOT" ||
-                            c.Value.ToString().ToUpper().Contains("PREV"))
+                        if (c.Value.ToString().ToUpper() == "THIS" || c.Value.ToString().ToUpper() == "FROM" || c.Value.ToString().ToUpper() == "ROOT" || c.Value.ToString().ToUpper().Contains("PREV"))
                         {
 
                         }
@@ -245,6 +247,10 @@ namespace CrusaderKingsStoryGen
                         if (c.Value.ToString().ToUpper() == "FROM" || c.Value.ToString().ToUpper() == "ROOT" || c.Value.ToString().ToUpper().Contains("PREV"))
                         {
 
+                        }
+                        if (c.Value.ToString().ToUpper() == "THIS" )
+                        {
+                            
                         }
                         else
                         {

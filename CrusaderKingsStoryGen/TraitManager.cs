@@ -103,6 +103,7 @@ namespace CrusaderKingsStoryGen
 
 );
 
+            // TODO add great holy war-related traits, after adding generated great holy wars.
 
             ScriptScope c = (ScriptScope) last.Children[last.Children.Count - 1];
             var op = new ScriptScope("opposites");

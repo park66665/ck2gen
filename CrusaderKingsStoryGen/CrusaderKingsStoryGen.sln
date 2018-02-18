@@ -26,4 +26,11 @@ Global
 		{5DC3E0BD-6CE8-4ED5-9FCA-20A5594CD6D0}.Release|x64.ActiveCfg = Release|x64
 		{5DC3E0BD-6CE8-4ED5-9FCA-20A5594CD6D0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
+	EndGlobalSection
 EndGlobal

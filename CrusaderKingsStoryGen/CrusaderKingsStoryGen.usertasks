@@ -1,0 +1,6 @@
+<ListOfTaskListEntry>
+  <TaskListEntry file="" description="It lacks artifact support. Add it." priority="High" />
+  <TaskListEntry file="" description="Procedural Content Generation here is mostly impotent; add cultural buildings, culture-(or religion-) specific CBs, etc, etc, ad infinitum." />
+  <TaskListEntry file="" description="Offmap power, and its culture-bound features (e.g. (dis)likes [cultures, religions...]). It can be removed entirely, though." />
+  <TaskListEntry file="" description="Trade Route Generation through adding &amp; connecting important trade hubs." priority="Low" />
+</ListOfTaskListEntry>

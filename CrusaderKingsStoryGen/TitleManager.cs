@@ -151,6 +151,8 @@ namespace CrusaderKingsStoryGen
 
         public float maxDist = 0;
 
+        // TODO procedurally generating mercenary compositions & holy orders (which would require revisions in EventManager.cs).
+
         private static String[] compositions = new[]
         {
             "muslim_turkic_company_composition",

@@ -384,11 +384,15 @@ namespace CrusaderKingsStoryGen
                         lb.SetPixel(x, y, Color.Transparent);
                     }
                 }
+
+                // TODO This max_settlements code is too rudimentary.
+
                 provinceParser.max_settlements = (provinceParser.Points.Count / 700);
                 if (provinceParser.max_settlements <= 1)
                     provinceParser.max_settlements = 2;
                 if (provinceParser.max_settlements > 7)
                     provinceParser.max_settlements = 7;
+                
                 foreach (var point in provinceParser.Points)
                 {
                     lb.SetPixel(point.X - minX, point.Y - minY, Color.White);

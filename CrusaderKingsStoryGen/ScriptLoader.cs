@@ -761,6 +761,10 @@ namespace CrusaderKingsStoryGen
         }
     }
 
+    // Above is a toolbox. it's just documented poorly.
+
+    // Below is, presumably, a parser. It has its own data structure post-parse, but it's undocumented.
+
     class Script
     {
         public string Name { get; set; }
